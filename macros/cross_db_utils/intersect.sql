@@ -1,5 +1,5 @@
 {% macro intersect() %}
-  {{ return(adapter.dispatch('intersect', 'dbt_utils')()) }}
+    {{ return(adapter.dispatch("intersect", "dbt_utils")()) }}
 {% endmacro %}
 
 
@@ -11,6 +11,7 @@
 
 {% macro bigquery__intersect() %}
 
-    intersect distinct
+    intersect
+    distinct
 
 {% endmacro %}
