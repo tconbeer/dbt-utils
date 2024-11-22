@@ -28,8 +28,7 @@
                     -- fail the test if they are the same number
                     when count_our_model = count_comparison_model
                     then 1
-                    -- pass the test if the delta is positive (i.e. return the number
-                    -- 0)
+                    -- pass the test if the delta is positive (i.e. return the number 0)
                     else 0
                 end as row_count_delta
             from counts

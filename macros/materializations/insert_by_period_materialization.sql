@@ -220,7 +220,7 @@
       insert into {{target_relation}} ({{target_cols_csv}})
       (
           select
-              {{target_cols_csv}}
+            {{ target_cols_csv }}
           from {{tmp_relation.include(schema=False)}}
       );
         {%- endcall %}

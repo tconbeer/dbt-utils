@@ -102,8 +102,7 @@
                     lower_bound {{ allow_zero_length_operator }} upper_bound, false
                 ) as lower_bound_{{ allow_zero_length_operator_in_words }}_upper_bound,
 
-                -- For each record: upper_bound {{ allow_gaps_operator }} the next
-                -- lower_bound.
+                -- For each record: upper_bound {{ allow_gaps_operator }} the next lower_bound.
                 -- Coalesce it to handle null cases for the last record.
                 coalesce(
                     upper_bound {{ allow_gaps_operator }} next_lower_bound,
