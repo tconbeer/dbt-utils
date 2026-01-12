@@ -17,7 +17,7 @@
         {%- if prefix != "" or suffix != "" %}
             as {{ adapter.quote(prefix ~ col ~ suffix) | trim }}
         {%- endif -%}
-        {%- if not loop.last %},{{ "\n  " }}{% endif %}
+        {%- if not loop.last %},{{ "\n" }}{% endif %}
 
     {%- endfor -%}
 {%- endmacro %}
